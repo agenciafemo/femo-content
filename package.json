@@ -1,0 +1,25 @@
+{
+  "name": "femo-content",
+  "version": "1.0.0",
+  "description": "FEMO CONTENT — Cérebro criativo da agência",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@google/generative-ai": "^0.21.0",
+    "@google-analytics/data": "^4.8.0",
+    "@react-pdf/renderer": "^3.4.4",
+    "axios": "^1.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8"
+  }
+}
