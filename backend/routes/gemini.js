@@ -27,7 +27,7 @@ router.post('/analisar-perfil', async (req, res) => {
       return res.status(400).json({ erro: 'Username é obrigatório' })
     }
 
-    const model = getGenAI().getGenerativeModel({ model: 'gemini-1.5-pro' })
+    const model = getGenAI().getGenerativeModel({ model: 'gemini-pro' })
 
     const prompt = `Analise o perfil Instagram @${username} e forneça:
 1. Tom de voz e estilo
@@ -65,7 +65,7 @@ router.post('/diagnostico', async (req, res) => {
       return res.status(400).json({ erro: 'Briefing é obrigatório' })
     }
 
-    const model = getGenAI().getGenerativeModel({ model: 'gemini-1.5-pro' })
+    const model = getGenAI().getGenerativeModel({ model: 'gemini-pro' })
 
     const prompt = `Com base neste briefing de cliente:
 ${JSON.stringify(briefing, null, 2)}
