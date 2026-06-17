@@ -44,3 +44,4 @@ Thumbs.db
 # Misc
 .cache/
 *.tgz
+node_modules
