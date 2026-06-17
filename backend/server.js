@@ -48,7 +48,23 @@ import claudeRouter from './routes/claude.js'
 import geminiRouter from './routes/gemini.js'
 
 const app = express()
-app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:5173' }))
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://femohotel.site',
+  'https://femo-content.netlify.app',
+  process.env.FRONTEND_URL
+].filter(Boolean)
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true)
+    } else {
+      callback(new Error('CORS não permitido'))
+    }
+  }
+}))
 app.use(express.json())
 
 // Rotas de IA
