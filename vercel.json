@@ -1,16 +1,8 @@
 {
-  "framework": "vite",
-  "outputDirectory": "dist",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/.*",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+      "source": "/:path((?!_next|_static|.*\\..*|$).*)",
+      "destination": "/index.html"
     }
   ]
 }
