@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'Already built'",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
