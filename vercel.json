@@ -1,8 +1,9 @@
 {
-  "framework": "vite",
-  "rewrites": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
     {
-      "source": "/(.*)",
+      "src": "^/(?!.*\\.).*$",
       "destination": "/index.html"
     }
   ]
